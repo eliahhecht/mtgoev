@@ -14,10 +14,9 @@ func (d *CannedDtkDownloader) DownloadUrl(url string) (r io.Reader, err error) {
 	return os.Open("dtk.html")
 }
 
-downloader := &CannedDtkDownloader{}
-scraper := &Scraper{Downloader: downloader}
-
 func TestScraperGetsAllCards(t *testing.T) {
+	downloader := &CannedDtkDownloader{}
+	scraper := &Scraper{Downloader: downloader}
 
 	set := scraper.ScrapeSet("dtk")
 
