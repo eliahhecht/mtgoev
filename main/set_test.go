@@ -22,5 +22,5 @@ func TestSetEvCalculatesCorrectly(t *testing.T) {
 
 	ev := set.PackEV()
 
-	assert.Equal(t, decimal.New(14.625), ev, "The EV of a pack should be calculated correctly")
+	assert.Equal(t, 14.625, ev, "The EV of a pack should be calculated correctly")
 }
